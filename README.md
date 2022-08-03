@@ -23,7 +23,7 @@ KAFKA Ecosystem:
 Stuff to download:
 1. Open the [Kafka Quickstart](https://kafka.apache.org/quickstart) page and download the Kafka [here](https://www.apache.org/dyn/closer.cgi?path=/kafka/3.2.1/kafka_2.13-3.2.1.tgz).
    1. As of this project created. using Kafka 3.2.1
-2. Springboot
+2. [Spring Initializr](https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.2&packaging=jar&jvmVersion=11&groupId=com.dzakirinmd&artifactId=springboot-kafka-playground&name=springboot-kafka-playground&description=Demo%20project%20for%20Spring%20Boot%20and%20Kafka&packageName=com.dzakirinmd.springboot-kafka-playground&dependencies=web,kafka)
 
 Start Kafka Environment:
 1. open terminal
@@ -33,6 +33,5 @@ Start Kafka Environment:
 5. ```bin/kafka-server-start.sh config/server.properties```
 6. Kafka broker is running at localhost:9092
 
-
-
+<h1>Credits</h1>
 Credit to [Java Guides](https://www.youtube.com/c/JavaGuides) Youtube channel for providing courses.
