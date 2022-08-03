@@ -33,5 +33,8 @@ Start Kafka Environment:
 5. ```bin/kafka-server-start.sh config/server.properties```
 6. Kafka broker is running at localhost:9092
 
+<h1>Documentation</h1>
+- [Spring Kafka Documentation](https://docs.spring.io/spring-kafka/reference/html/#getting-started)
+
 <h1>Credits</h1>
 Credit to [Java Guides](https://www.youtube.com/c/JavaGuides) Youtube channel for providing courses.
