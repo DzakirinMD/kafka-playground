@@ -26,12 +26,14 @@ Stuff to download:
 2. [Spring Initializr](https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.2&packaging=jar&jvmVersion=11&groupId=com.dzakirinmd&artifactId=springboot-kafka-playground&name=springboot-kafka-playground&description=Demo%20project%20for%20Spring%20Boot%20and%20Kafka&packageName=com.dzakirinmd.springboot-kafka-playground&dependencies=web,kafka)
 
 Start Kafka Environment:
-1. open terminal
+1. open terminal to start Kafka Zookeeper
 2. cd /path/to/kafka_2.12-3.2.1
-3. ```bin/zookeeper-server-start.sh config/zookeeper.properties```
-4. open new terminal
-5. ```bin/kafka-server-start.sh config/server.properties```
-6. Kafka broker is running at localhost:9092
+   1. For Window Powershell: ```.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties```
+   2. For Linux/Mac: ```bin/zookeeper-server-start.sh config/zookeeper.properties```
+3. open new terminal to start Kafka server
+   1. For Window Powershell: ```.\bin\windows\kafka-server-start.bat .\config\server.properties```
+   2. For Linux/Mac: ```bin/kafka-server-start.sh config/server.properties```
+4. Kafka broker is running at localhost:9092
 
 <h1>Documentation</h1>
 - [Spring Kafka Documentation](https://docs.spring.io/spring-kafka/reference/html/#getting-started)
