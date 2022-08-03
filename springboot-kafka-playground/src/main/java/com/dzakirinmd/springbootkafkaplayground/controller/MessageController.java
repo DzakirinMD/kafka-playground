@@ -23,8 +23,8 @@ public class MessageController {
     @GetMapping("/publish")
     public ResponseEntity<String> publish(@RequestParam("message") String message) {
 
-        kafkaProducer.sendMessage(message);;
+        kafkaProducer.sendMessage(message);
 
-        return ResponseEntity.ok("Message has been sent to the topic!");
+        return ResponseEntity.ok("Message : " + message + " , has been publish to the topic!");
     }
 }
