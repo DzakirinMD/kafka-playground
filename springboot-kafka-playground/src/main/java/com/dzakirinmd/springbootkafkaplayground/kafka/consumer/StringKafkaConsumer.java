@@ -6,9 +6,9 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 @Service
-public class KafkaConsumer {
+public class StringKafkaConsumer {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(KafkaConsumer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(StringKafkaConsumer.class);
 
 //    Subscribe to Topic1 . There can be a lot of subscribers
     @KafkaListener(topics = "Topic1", groupId = "myConsumerGroup")

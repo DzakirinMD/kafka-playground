@@ -4,7 +4,7 @@ package com.dzakirinmd.springbootkafkaplayground.model;
  * JsonSerializer and JsonDeserializer from application.yaml is used to
  * convert Java Objects to and from JSON
  *
- * this simple POJO/model/Bean class is used for the serialization
+ * This simple POJO/model/Bean class is used for the serialization
  */
 public class Users {
 

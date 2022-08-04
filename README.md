@@ -38,6 +38,10 @@ Start Kafka Environment:
    1. bin/kafka-console-consumer.sh --topic Topic1 --from-beginning --bootstrap-server localhost:9092
    2. For Window Powershell: ```.\bin\windows\kafka-console-consumer.bat --topic Topic1 --from-beginning --bootstrap-server localhost:9092```
    3. For Linux/Mac: ```bin/kafka-console-consumer.sh --topic Topic1 --from-beginning --bootstrap-server localhost:9092```
+   4. available topics:
+      1. quickstart-events
+      2. Topic1
+      3. Topic1-json
 6. Running the application:
    1. in cmd, cd /path/to/pom.xml and run ```mvn clean package -DskipTests=true```
    2. make sure the kafka server and zookeeper is running, then cd /path/to/springboot-kafka-playground-0.0.1-SNAPSHOT.jar and run ```java -jar springboot-kafka-playground-0.0.1-SNAPSHOT.jar```

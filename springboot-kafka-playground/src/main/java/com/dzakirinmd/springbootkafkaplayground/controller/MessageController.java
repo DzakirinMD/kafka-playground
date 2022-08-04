@@ -25,6 +25,6 @@ public class MessageController {
 
         stringKafkaProducer.sendMessage(message);
 
-        return ResponseEntity.ok("Message : " + message + " , has been publish to the topic!");
+        return ResponseEntity.ok("String Message : " + message + " , has been publish to the topic!");
     }
 }
