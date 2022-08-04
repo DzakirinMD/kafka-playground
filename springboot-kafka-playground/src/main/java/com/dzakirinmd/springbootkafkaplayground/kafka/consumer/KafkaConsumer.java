@@ -1,4 +1,4 @@
-package com.dzakirinmd.springbootkafkaplayground.kafka;
+package com.dzakirinmd.springbootkafkaplayground.kafka.consumer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
