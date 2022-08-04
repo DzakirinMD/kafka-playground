@@ -9,10 +9,16 @@ import org.springframework.kafka.config.TopicBuilder;
 public class KafkaTopicConfig {
 
     @Bean
-    public NewTopic playgroundTopic() {
+    public NewTopic playgroundStringTopic() {
 //        .partitions can be removed if want to use default number of partition by spring
         return TopicBuilder.name("Topic1")
                 .partitions(10)
+                .build();
+    }
+
+    @Bean
+    public NewTopic playgroundJSONTopic() {
+        return TopicBuilder.name("Topic1-json")
                 .build();
     }
 }

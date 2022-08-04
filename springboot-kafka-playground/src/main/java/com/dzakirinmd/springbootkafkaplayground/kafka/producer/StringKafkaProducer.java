@@ -1,4 +1,4 @@
-package com.dzakirinmd.springbootkafkaplayground.kafka;
+package com.dzakirinmd.springbootkafkaplayground.kafka.producer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,15 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+/**
+ * This producer is for String producer
+ *
+ * using @Service to make this class a java bean
+ */
 @Service
-public class KafkaProducer {
+public class StringKafkaProducer {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(KafkaProducer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(StringKafkaProducer.class);
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
 
-//    public KafkaProducer(KafkaTemplate<String, String> kafkaTemplate) {
+//    public StringKafkaProducer(KafkaTemplate<String, String> kafkaTemplate) {
 //        this.kafkaTemplate = kafkaTemplate;
 //    }
 
