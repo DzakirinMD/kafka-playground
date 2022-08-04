@@ -30,7 +30,7 @@ public class StringKafkaProducer {
 
     public void sendMessage(String message) {
 
-        LOGGER.info(String.format("Message sent %s" , message));
+        LOGGER.info(String.format("String Message sent %s" , message));
 //        LOGGER.info("The message being sent is : " + message );
         kafkaTemplate.send(topicName, message);
     }

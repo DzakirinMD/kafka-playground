@@ -13,6 +13,6 @@ public class StringKafkaConsumer {
 //    Subscribe to Topic1 . There can be a lot of subscribers. This is a string deserializer
     @KafkaListener(topics = "${spring.kafka.topic.name}", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(String message) {
-        LOGGER.info(String.format("Message received -> %s" , message));
+        LOGGER.info(String.format("String Message received -> %s" , message));
     }
 }
