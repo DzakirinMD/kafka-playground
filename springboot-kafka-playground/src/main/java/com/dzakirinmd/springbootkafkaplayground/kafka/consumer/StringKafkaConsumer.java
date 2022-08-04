@@ -11,7 +11,7 @@ public class StringKafkaConsumer {
     private static final Logger LOGGER = LoggerFactory.getLogger(StringKafkaConsumer.class);
 
 //    Subscribe to Topic1 . There can be a lot of subscribers. This is a string deserializer
-    @KafkaListener(topics = "Topic1", groupId = "myConsumerGroup")
+    @KafkaListener(topics = "${spring.kafka.topic.name}", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(String message) {
         LOGGER.info(String.format("Message received -> %s" , message));
     }

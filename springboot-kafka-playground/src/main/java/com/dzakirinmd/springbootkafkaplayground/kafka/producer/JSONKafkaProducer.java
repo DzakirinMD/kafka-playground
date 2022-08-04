@@ -4,6 +4,7 @@ import com.dzakirinmd.springbootkafkaplayground.model.Users;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.Message;
@@ -19,6 +20,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class JSONKafkaProducer {
 
+    @Value("${spring.kafka.topic-json.name}")
+    private String topicJsonName;
+
     private static final Logger LOGGER = LoggerFactory.getLogger(JSONKafkaProducer.class);
 
     @Autowired
@@ -30,7 +34,7 @@ public class JSONKafkaProducer {
 
         Message<Users> message = MessageBuilder
                 .withPayload(data)
-                .setHeader(KafkaHeaders.TOPIC, "Topic1-json")
+                .setHeader(KafkaHeaders.TOPIC, topicJsonName)
                 .build();
 
         kafkaTemplate.send(message);

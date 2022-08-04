@@ -3,6 +3,7 @@ package com.dzakirinmd.springbootkafkaplayground.kafka.producer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class StringKafkaProducer {
+
+    @Value("${spring.kafka.topic.name}")
+    private String topicName;
+
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StringKafkaProducer.class);
 
@@ -27,6 +32,6 @@ public class StringKafkaProducer {
 
         LOGGER.info(String.format("Message sent %s" , message));
 //        LOGGER.info("The message being sent is : " + message );
-        kafkaTemplate.send("Topic1", message);
+        kafkaTemplate.send(topicName, message);
     }
 }

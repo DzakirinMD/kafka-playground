@@ -13,7 +13,7 @@ public class JSONKafkaConsumer {
 
 //    This is a JSON deserializer. Will convert JSON Object to Java Object.
 //    In below example the Topic1-json Object is converted to Java Object at the users.toString() method
-    @KafkaListener(topics = "Topic1-json", groupId = "myConsumerGroup")
+    @KafkaListener(topics = "${spring.kafka.topic-json.name}", groupId = "${spring.kafka.consumer.group-id}")
     public void consume(Users users) {
         LOGGER.info(String.format("JSON Message received -> %s" , users.toString()));
     }
