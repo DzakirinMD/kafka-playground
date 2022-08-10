@@ -7,19 +7,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-/**
- * This producer is for String producer
- *
- * using @Service to make this class a java bean
- */
 @Service
 public class StringKafkaProducer {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(StringKafkaProducer.class);
+
     @Value("${spring.kafka.topic.name}")
     private String topicName;
-
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(StringKafkaProducer.class);
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
