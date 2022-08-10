@@ -1,0 +1,22 @@
+spring:
+  kafka:
+    consumer:
+      group-id: myGroup
+      boostrap-servers: localhost:9092
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    topic:
+      name: wikimedia-recent-change
+  datasource:
+    url: 'jdbc:postgresql://localhost:49153/my_cms'
+    username: postgres
+    password: postgrespw
+    jpa:
+      hibernate:
+        ddl-auto: create-drop
+      show-sql: true
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          format_sql: true
