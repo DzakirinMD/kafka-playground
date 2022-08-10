@@ -4,6 +4,7 @@
 Basic Spring Boot + Kafka: this is a playground for my Kafka(Distributed System) learning. 
 Using Kafka version 3.2.1
 Using Java 11
+Using Postgres as Database
 </p>
 
 
