@@ -70,6 +70,7 @@ Wikimedia -> Kafka Producer -> Kafka Broker -> Kafka Consuer -> DB
 Microservices: 
 1. kafka-consumer-database
 2. kafka-producer-wikimedia
+3. wikimedia-recent-change
 
 ![Credit to Java Guides Youtube Channel](./img/realworld-project-setup.png)
 </p>

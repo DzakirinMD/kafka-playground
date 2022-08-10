@@ -25,7 +25,7 @@ public class KafkaTopicConfig {
     }
 
     /**
-     * commandLineRunner created in bean instead of implemented at entry class (SpringBootProducerApplication)
+     * commandLineRunner created in bean instead of implemented at main entry point class (SpringBootProducerApplication)
      * @return args
      */
     @Bean
