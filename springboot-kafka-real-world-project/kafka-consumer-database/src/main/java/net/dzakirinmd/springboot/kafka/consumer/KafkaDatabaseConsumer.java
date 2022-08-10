@@ -11,7 +11,7 @@ public class KafkaDatabaseConsumer {
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaDatabaseConsumer.class);
 
     @KafkaListener(
-            topics = "${spring.kafka.topic-json.name}",
+            topics = "${spring.kafka.topic.name}",
             groupId = "${spring.kafka.consumer.group-id}"
     )
     public void consumeMessage(String eventMessage) {
