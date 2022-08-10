@@ -1,5 +1,16 @@
 # kafka-playground
-Basic Spring Boot + Kafka: this is a playground for my Kafka(Distributed System) learning. Using version 3.2.1
+
+<p>
+Basic Spring Boot + Kafka: this is a playground for my Kafka(Distributed System) learning. 
+Using Kafka version 3.2.1
+Using Java 11
+Using Postgres as Database
+</p>
+
+
+This Repo consist of 2 project:
+1. springboot-kafka-playground -> Tutorial and Basic of Kafka
+2. springboot-kafka-wikimedia -> Real world application project
 
 KAFKA Ecosystem:
 ![Credit to Java Guides Youtube Channel](./img/kafka-ecosystem.png)
@@ -18,12 +29,12 @@ KAFKA Ecosystem:
 - **Zookeeper**: Manage/Maintain state of all broker, topic, cluster and config
 - **Broker**: if 1 broker goes down. other 2 can manage the entire cluster
 
-<h1>Step to start the project</h1>
+<h1>Step to start the project (Tutorial-Playground)</h1>
 
 Stuff to download:
 1. Open the [Kafka Quickstart](https://kafka.apache.org/quickstart) page and download the Kafka [here](https://www.apache.org/dyn/closer.cgi?path=/kafka/3.2.1/kafka_2.13-3.2.1.tgz).
    1. As of this project created. using Kafka 3.2.1
-2. [Spring Initializr](https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.2&packaging=jar&jvmVersion=11&groupId=com.dzakirinmd&artifactId=springboot-kafka-playground&name=springboot-kafka-playground&description=Demo%20project%20for%20Spring%20Boot%20and%20Kafka&packageName=com.dzakirinmd.springboot-kafka-playground&dependencies=web,kafka)
+2. [Spring Initializr Playground](https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.2&packaging=jar&jvmVersion=11&groupId=com.dzakirinmd&artifactId=springboot-kafka-playground&name=springboot-kafka-playground&description=Demo%20project%20for%20Spring%20Boot%20and%20Kafka&packageName=com.dzakirinmd.springboot-kafka-playground&dependencies=web,kafka)
 
 Start Kafka Environment:
 1. open terminal to start Kafka Zookeeper:
@@ -45,6 +56,31 @@ Start Kafka Environment:
 6. Running the application:
    1. in cmd, cd /path/to/pom.xml and run ```mvn clean package -DskipTests=true```
    2. make sure the kafka server and zookeeper is running, then cd /path/to/springboot-kafka-playground-0.0.1-SNAPSHOT.jar and run ```java -jar springboot-kafka-playground-0.0.1-SNAPSHOT.jar```
+
+<h1>Wikimedia Stream-Real World project</h1>
+
+<p>
+Kafka Real world project: read huge amount of realtime stream data from Wikimedia to database.
+it is a multi-model maven project.
+
+Data Stream From: [wikimedia stream](https://stream.wikimedia.org/v2/stream/recentchange) 
+
+Project Flow:
+Wikimedia -> Kafka Producer -> Kafka Broker -> Kafka Consuer -> DB
+
+Microservices: 
+1. kafka-consumer-database
+2. kafka-producer-wikimedia
+3. wikimedia-recent-change
+
+![Credit to Java Guides Youtube Channel](./img/realworld-project-setup.png)
+</p>
+
+<h1>Step to start the project (Wikimedia Stream-Real World project)</h1>
+
+1. [Spring Initializr Wikimedia](https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.2&packaging=jar&jvmVersion=11&groupId=net.dzakirinmd&artifactId=springboot-kafka-real-world-project&name=springboot-kafka-real-world-project&description=Demo%20RealWorld%20project%20for%20Spring%20Boot%20and%20Kafka&packageName=net.dzakirinmd.springboot-kafka-real-world-project&dependencies=kafka,lombok)
+2. Open this realworld project from different intellij to avoid confusion.
+
 
 <h1>Documentation</h1>
 - [Spring Kafka Documentation](https://docs.spring.io/spring-kafka/reference/html/#getting-started)
