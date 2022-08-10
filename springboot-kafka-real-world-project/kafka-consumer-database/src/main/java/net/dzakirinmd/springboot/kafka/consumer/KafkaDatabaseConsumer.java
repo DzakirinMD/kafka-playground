@@ -10,6 +10,11 @@ public class KafkaDatabaseConsumer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaDatabaseConsumer.class);
 
+    /**
+     * The consumeMessage() method is to consume messages from topics
+     * @param eventMessage
+     *        stream of message from the KafkaTopic
+     */
     @KafkaListener(
             topics = "${spring.kafka.topic.name}",
             groupId = "${spring.kafka.consumer.group-id}"
