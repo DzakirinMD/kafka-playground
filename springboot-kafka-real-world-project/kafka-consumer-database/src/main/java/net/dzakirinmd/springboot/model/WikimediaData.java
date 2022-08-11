@@ -12,18 +12,14 @@ import javax.persistence.*;
 public class WikimediaData {
 
     @Id
-    @SequenceGenerator(
-            name = "wikimediadata_recentchange_sequence",
-            sequenceName = "wikimediadata_recentchange_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy =GenerationType.SEQUENCE,
-            generator = "wikimediadata_recentchange_sequence"
-    )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Using LOB due to wiki even data is too large
-    @Lob
+    /**
+     * Using LOB due to wiki even data is too large
+     * <a href="https://stackoverflow.com/questions/67261808/jpa-with-postgres-anomalously-writes-text-in-lob-column-as-a-number">postgress LOB issue</a>
+     * LOB column require @Column(columnDefinition = "text"), which requires not to use @Lob at Strings at all
+     */
+    @Column(columnDefinition = "text")
     private String wikiEventData;
 }
