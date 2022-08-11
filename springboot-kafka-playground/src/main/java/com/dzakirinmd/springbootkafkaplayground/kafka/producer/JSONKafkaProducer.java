@@ -20,10 +20,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class JSONKafkaProducer {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(JSONKafkaProducer.class);
+
     @Value("${spring.kafka.topic-json.name}")
     private String topicJsonName;
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(JSONKafkaProducer.class);
 
     @Autowired
     private KafkaTemplate<String, Users> kafkaTemplate;

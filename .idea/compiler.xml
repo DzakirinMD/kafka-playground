@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="kafka-consumer-database" />
         <module name="kafka-producer-wikimedia" />
         <module name="springboot-kafka-playground" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="kafka-consumer-database" target="11" />
       <module name="kafka-producer-wikimedia" target="11" />
       <module name="springboot-kafka-playground" target="11" />
       <module name="springboot-kafka-real-world-project" target="11" />
@@ -18,6 +20,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="kafka-consumer-database" options="-parameters" />
       <module name="kafka-producer-wikimedia" options="-parameters" />
       <module name="springboot-kafka-playground" options="-parameters" />
       <module name="springboot-kafka-real-world-project" options="-parameters" />

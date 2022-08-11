@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/springboot-kafka-real-world-project/kafka-consumer-database/kafka-consumer-database.iml" filepath="$PROJECT_DIR$/springboot-kafka-real-world-project/kafka-consumer-database/kafka-consumer-database.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/kafka-playground.iml" filepath="$PROJECT_DIR$/.idea/kafka-playground.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-kafka-real-world-project/kafka-producer-wikimedia/kafka-producer-wikimedia.iml" filepath="$PROJECT_DIR$/springboot-kafka-real-world-project/kafka-producer-wikimedia/kafka-producer-wikimedia.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-kafka-playground/springboot-kafka-playground.iml" filepath="$PROJECT_DIR$/springboot-kafka-playground/springboot-kafka-playground.iml" />
