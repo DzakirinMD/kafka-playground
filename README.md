@@ -45,7 +45,9 @@ Start Kafka Environment:
    1. For Window Powershell: ```.\bin\windows\kafka-server-start.bat .\config\server.properties```
    2. For Linux/Mac: ```bin/kafka-server-start.sh config/server.properties```
 4. Kafka broker is running at localhost:9092
-5. To read the message in topic:
+5. To delete Kafka Topic:
+    1. for Linux/Mac: ```./bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic order-topics```
+6. To read the message in topic:
    1. bin/kafka-console-consumer.sh --topic Topic1 --from-beginning --bootstrap-server localhost:9092
    2. For Window Powershell: ```.\bin\windows\kafka-console-consumer.bat --topic Topic1 --from-beginning --bootstrap-server localhost:9092```
    3. For Linux/Mac: ```bin/kafka-console-consumer.sh --topic Topic1 --from-beginning --bootstrap-server localhost:9092```
@@ -53,7 +55,7 @@ Start Kafka Environment:
       1. quickstart-events
       2. Topic1
       3. Topic1-json
-6. Running the application:
+7. Running the application:
    1. in cmd, cd /path/to/pom.xml and run ```mvn clean package -DskipTests=true```
    2. make sure the kafka server and zookeeper is running, then cd /path/to/springboot-kafka-playground-0.0.1-SNAPSHOT.jar and run ```java -jar springboot-kafka-playground-0.0.1-SNAPSHOT.jar```
 
